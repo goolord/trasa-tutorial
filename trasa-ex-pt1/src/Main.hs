@@ -66,7 +66,7 @@ helloWorld :: ByteString -> Maybe ByteString -> TrasaT IO ByteString
 helloWorld a (Just b) = pure $ a <> ", " <> b <> "!"
 helloWorld a Nothing = pure a
 
--- | We define a list of all the routes for our server: the only real 'gotcha'
+-- | We define a list of all the routes for our server for wai
 allRoutes :: [Constructed Route]
 allRoutes = [Constructed HelloWorld]
 
